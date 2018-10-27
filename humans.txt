@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Yonglin Wang -- Developer & Designer -- @WYonglin
+    Angel Pan -- Producer -- @BeautifulBlueAP
+
+# THANKS
+
+    Mr. McCaffrey
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr
+    Fontawsome 4.7
+    Bootstrap Grid 4.0 beta 2
+

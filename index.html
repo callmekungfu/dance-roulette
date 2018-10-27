@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Leader's wheel</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Yong Lin Wang">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="icon" href="favicon.ico">
+        <!--<link rel="stylesheet" href="css/normalize.css">-->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="icons/css/font-awesome.min.css">
+    </head>
+    <body style="margin: 0">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- The video player -->
+        <div class="video-background">
+            <div class="video-foreground">
+                <iframe src="" frameborder="0" allowfullscreen id="videoBody"></iframe>
+            </div>
+        </div>
+
+        <!-- Overlay Menu -->
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <ul>
+                    <li ><a class="add-track">Add New Video</a></li>
+                    <li><a class="manage">Track Manager</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a class="credit">Credit</a></li>
+                </ul>
+            </nav>
+            <div class="overlay-container" id="manage" hidden>
+                <a class="go-back"><i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back</a>
+                <h1>Delete or Edit a Video</h1>
+                <p class="sub-title">Click on a video thumbnail to delete it.</p>
+                <div class="collection"></div>
+            </div>
+            <div class="overlay-container" id="addTrack" hidden>
+                <a class="go-back"><i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back</a>
+                <h1>Add a New Video</h1>
+                <form>
+                    <div class="input-group">
+                        <p>Title of The Video</p>
+                        <input type="text" placeholder="&quot;Never Gonna Give You Up by Rick Astly&quot;" id="videoTitle">
+                    </div>
+                    <div class="input-group">
+                        <p>Add the YouTube link of the video</p>
+                        <input type="text" placeholder="&quot;https://www.youtube.com/watch?v=38nYSq8RdKE&quot;" id="videoLink">
+                    </div>
+                </form>
+                <a class="btn" data-title="Add Video" id="submitBtn"></a>
+            </div>
+            <div class="overlay-container" id="credit" hidden>
+                <a class="go-back"><i class="fa fa-chevron-left" aria-hidden="true"></i> Go Back</a>
+                <h1>Credits</h1>
+                <p class="sub-title">The people behind this app.</p>
+                <h2>Developer</h2>
+                <p>Yonglin Wang - <a href="http://yonglinwang.ca">website</a></p>
+                <h2>Producer</h2>
+                <p>Angel Pan - <a href="https://twitter.com/BeautifulBlueAP">@BeautifulBlueAP</a></p>
+                <h2>License</h2>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </div>
+        </div>
+
+        <!-- The Main Client Body -->
+        <div class="container">
+            <div class="button_container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+            <div class="main">
+                <div class="text"></div>
+                <!--<a class="control-btn btn" data-title="Pause"></a>-->
+                <a class="awesome-btn control-btn btn" data-title="Let's get grooving!"></a>
+                <a class="control-btn btn" data-title="Full Screen" id="fullscreen"></a>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/TextScramble.js"></script>
+        <script src="js/vendor/jquery.idle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
