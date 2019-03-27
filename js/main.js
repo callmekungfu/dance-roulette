@@ -39,19 +39,13 @@ spedBtn.click(function (evt) {
     if(init){
         text.fadeIn('slow');
         spedBtn.attr('data-title', 'Play Something Else!');
-        setTimeout(function () {
-            $('.control-btn').fadeIn('fast')
-        }, 2000);
+        $('.control-btn').fadeIn('fast')
         $(document).idle({
             onIdle: function(){
-                btn.animate({
-                    'opacity': '0'
-                }, 800)
+                btn.fadeOut(500);
             },
             onActive: function () {
-                btn.animate({
-                    'opacity': '1'
-                }, 800)
+                btn.fadeIn(400);
             },
             idle: 2000
         });
