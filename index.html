@@ -20,14 +20,14 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- The video player -->
-        <div class="video-background">
-            <div class="video-foreground">
-                <iframe src="" frameborder="0" allowfullscreen id="videoBody"></iframe>
-            </div>
+        
+        <!-- Overlay Menu -->
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
         </div>
 
-        <!-- Overlay Menu -->
         <div class="overlay" id="overlay">
             <nav class="overlay-menu">
                 <ul>
@@ -71,19 +71,17 @@
             </div>
         </div>
 
-        <!-- The Main Client Body -->
-        <div class="container">
-            <div class="button_container" id="toggle">
-                <span class="top"></span>
-                <span class="middle"></span>
-                <span class="bottom"></span>
+        <div class="video-background">
+            <div class="video-foreground">
+                <iframe src="" frameborder="0" allowfullscreen id="videoBody"></iframe>
             </div>
-            <div class="main">
-                <div class="text"></div>
-                <!--<a class="control-btn btn" data-title="Pause"></a>-->
-                <a class="awesome-btn control-btn btn" data-title="Let's get grooving!"></a>
-                <a class="control-btn btn" data-title="Full Screen" id="fullscreen"></a>
-            </div>
+        </div>
+
+        <div class="main">
+            <h2 class="text"></h2>
+            <!--<a class="control-btn btn" data-title="Pause"></a>-->
+            <a class="awesome-btn control-btn btn" data-title="Let's get grooving!"></a>
+            <a class="control-btn btn" data-title="Full Screen" id="fullscreen"></a>
         </div>
 
         <!-- Scripts -->

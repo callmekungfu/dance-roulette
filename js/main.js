@@ -20,24 +20,8 @@ var phrases = ['Mr.McCaffrey\'s Dance Roulette', 'Created by Yonglin Wang & Ange
 var el = document.querySelector('.text');
 var fx = new TextScramble(el);
 
-var counter = 0;
-var next = function next() {
-    var text = $('.text');
-    if(counter <= 2){
-        fx.setText(phrases[counter]).then(function () {
-            setTimeout(next, 1500);
-        });
-    }
-    counter++;
-    if(text.text() === "let's get started"){
-        text.fadeOut('fast', function () {
-            $('.awesome-btn').fadeIn('slow');
-        })
-    }
-};
-next();
-
 $(document).ready(function () {
+    $('.awesome-btn').fadeIn('slow');
     console.log('Hello There! This App is Designed and Built by Yonglin Wang, visit him at yonglinwang.ca!');
     $.get('getContent.php', function (data) {
         content = data;
@@ -55,9 +39,6 @@ spedBtn.click(function (evt) {
     if(init){
         text.fadeIn('slow');
         spedBtn.attr('data-title', 'Play Something Else!');
-        spedBtn.animate({
-            'margin-top': '70vh'
-        }, 2000);
         setTimeout(function () {
             $('.control-btn').fadeIn('fast')
         }, 2000);
@@ -82,10 +63,10 @@ spedBtn.click(function (evt) {
     console.log(content);
     var item = content[index];
     fx.setText(item.title);
-    videoPlayer.attr('src', 'https://www.youtube.com/embed/'+ item.path +'?controls=0&showinfo=0&rel=0&autoplay=1&loop=0');
+    videoPlayer.attr('src', 'https://www.youtube.com/embed/'+ item.path +'?controls=1&showinfo=0&rel=0&autoplay=1&loop=0');
     if(count === 69){
         fx.setText('You Found the Easter Egg!');
-        videoPlayer.attr('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=0')
+        videoPlayer.attr('src', 'https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&showinfo=0&rel=0&autoplay=1&loop=0')
     }
 });
 $('#fullscreen').click(function () {
